@@ -1,6 +1,8 @@
 // NAME: 
 // DATE:
-// DESC: public class RPG {
+// DESC: 
+
+public class RPG {
 
 // YouTube Link: https://www.youtube.com/watch?v=5qUQT9Z1wDE
 
