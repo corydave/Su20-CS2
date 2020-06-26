@@ -64,8 +64,8 @@ public class Battle {
             } else {
                 p2 = playerOne;
                 p1 = playerTwo;
-                playerRoster.add(playerTwo);
                 playerRoster.add(playerOne);
+                playerRoster.add(playerTwo);
             }
 
             System.out.println("\n\n");
