@@ -1,4 +1,7 @@
-// VERSION 2.0.0
+// VERSION 2.0.1
+
+// CHANGELOG
+//  - Updated version number to match Battle.java
 
 public class Character {
 
