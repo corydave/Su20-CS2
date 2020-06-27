@@ -1,4 +1,7 @@
-// VERSION 2.0.0
+// VERSION 2.0.1
+
+// CHANGELOG:
+//  - Took off "s" from "NUM_OF_ROUNDSs"
 
 import java.lang.Math;
 import java.util.Random;
