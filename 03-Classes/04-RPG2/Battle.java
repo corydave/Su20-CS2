@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Battle {
 
     private final int D1_SIZE = 6;
-    private final int NUM_OF_ROUNDSs = 25;
+    private final int NUM_OF_ROUNDS = 25;
     private final boolean DEBUG = true; // For debugging - this will be false during actual gameplay
 
     private Character p1;
