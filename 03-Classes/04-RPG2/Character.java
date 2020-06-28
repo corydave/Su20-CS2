@@ -150,10 +150,12 @@ public class Character {
 
     public double attack() {
         System.out.println(name + "  attacks!");
+        return -1;
     }
     
     public double defend() {
         System.out.println(name + "  defends!");
+        return -1;
     }
     
     public void specialEffect() {
