@@ -1,7 +1,9 @@
-// VERSION 2.0.3
+// VERSION 2.0.5
 
 // CHANGELOG
 //  - Updated version number to match Battle.java
+//  - Added constructors
+//  - Added mechanism to affect 'debug' from main driver
 
 public class Character {
 
@@ -18,10 +20,31 @@ public class Character {
     private int wins;
     private int losses;
 
-    private final boolean DEBUG = true; // Will be changed to false during official battle
+    private static boolean debug = true; // Will be changed to false during official battle
 
     private int[] myStats = new int[5]; //    [currentHealth, strength, defense, special, points]
     private int[] oppInfo; //    [currentHealth, strength, defense, special, points]
+
+    // Constructors
+    public Character() {
+        name = "";
+        className = "";
+        currentHealth = 0;
+        strength = 0;
+        defense = 0;
+        special = 0;
+        points = 0;
+    }
+    
+    public Character (String name, int strength, int defense, int special, int points) {
+        this.name = name;
+        className = "Boring Character";
+        this.currentHealth = 100;
+        this.strength = strength;
+        this.defense = defense;
+        this.special = special;
+        this.points = points;
+    }
 
 
     // Getters and setters
@@ -99,12 +122,16 @@ public class Character {
     }    
 
     public boolean getDebug() {
-        return DEBUG;
+        return debug;
+    }
+    
+    public static void setDebug(boolean onOff) {
+        debug = onOff;
     }
 
     public int[] getMyInfo() {
 
-        if (DEBUG) {
+        if (debug) {
             System.out.println(name + "'s stats have been given away");
         }
 
@@ -141,7 +168,7 @@ public class Character {
 
     public void loadOppInfo(int[] oppStats) {
 
-        if (DEBUG) {
+        if (debug) {
             System.out.println("Opponents stats have been received.");
         }
 
