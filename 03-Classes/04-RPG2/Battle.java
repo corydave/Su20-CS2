@@ -1,4 +1,4 @@
-// VERSION 2.0.5
+// VERSION 2.0.6
 
 // CHANGELOG:
 //  - Took off "s" from "NUM_OF_ROUNDSs"
@@ -125,7 +125,8 @@ public class Battle {
             }
 
             if (debug) {
-                System.out.println("Player 1 attacks with " + attack + " and player 2 defends with " + defend + " for a difference of " + diff);
+                System.out.println("=====\nPlayer 1 attacks with " + attack + " and player 2 defends with " + defend + " for a difference of " + diff);
+                System.out.println("Player 1 health: " + p1.getCurrentHealth() + " and Player 2 health: " + p2.getCurrentHealth() + "\n=====");
             }
 
             // If p1's attack was successful, damage p2
@@ -163,7 +164,8 @@ public class Battle {
 
 
             if (debug) {
-                System.out.println("Player 2 attacks with " + attack + " and player 1 defends with " + defend + " for a difference of " + diff);
+                System.out.println("=====\nPlayer 2 attacks with " + attack + " and player 1 defends with " + defend + " for a difference of " + diff);
+                System.out.println("Player 1 health: " + p1.getCurrentHealth() + " and Player 2 health: " + p2.getCurrentHealth() + "\n=====");                
             }
 
             // if p2's attack was successful, damage p1
