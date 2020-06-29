@@ -1,4 +1,4 @@
-// VERSION 2.0.2
+// VERSION 2.0.3
 
 // CHANGELOG:
 //  - Took off "s" from "NUM_OF_ROUNDSs"
@@ -198,8 +198,10 @@ public class Battle {
 
     }
 
-    public ArrayList<Character> breakTie(Character c1, Character c2) {
+    public Character[] breakTie(Character c1, Character c2) {
 
+        Character[] players = new Character[2];
+        
         // If either player has more HEALTH than the other, that player is declared the winner
         if (p1.getCurrentHealth() > p2.getCurrentHealth()) {
             players[0] = p1;
