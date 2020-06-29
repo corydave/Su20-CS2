@@ -1,7 +1,8 @@
-// VERSION 2.0.3
+// VERSION 2.0.5
 
 // CHANGELOG:
 //  - Took off "s" from "NUM_OF_ROUNDSs"
+//  - Added static boolean and method to change 'debug' from the main driver
 
 import java.lang.Math;
 import java.util.Random;
@@ -11,7 +12,7 @@ public class Battle {
 
     private final int D1_SIZE = 6;
     private final int NUM_OF_ROUNDS = 25;
-    private final boolean DEBUG = true; // For debugging - this will be false during actual gameplay
+    private static boolean debug = true; // For debugging - this will be false during actual gameplay
 
     private Character p1;
     private Character p2;
@@ -28,16 +29,13 @@ public class Battle {
     }
 
     public boolean getDebug() {
-        return DEBUG;
+        return debug;
     }
     
-    public void setDebug(boolean onOff) {
+    public static void setDebug(boolean onOff) {
         
-        if (onOff) {
-            DEBUG = true;
-        } else {
-            DEBUG = false;
-        }
+        debug = onOff;
+    
     }
 
     public Battle() {
@@ -126,7 +124,7 @@ public class Battle {
                 diff = 0;
             }
 
-            if (DEBUG) {
+            if (debug) {
                 System.out.println("Player 1 attacks with " + attack + " and player 2 defends with " + defend + " for a difference of " + diff);
             }
 
@@ -164,7 +162,7 @@ public class Battle {
             }
 
 
-            if (DEBUG) {
+            if (debug) {
                 System.out.println("Player 2 attacks with " + attack + " and player 1 defends with " + defend + " for a difference of " + diff);
             }
 
@@ -292,7 +290,7 @@ public class Battle {
             total += rollDie(D1_SIZE);
         }
 
-        if (DEBUG) {
+        if (debug) {
             System.out.println("DEBUG: rollDice returned " + total);
         }
 
@@ -307,7 +305,7 @@ public class Battle {
 
     public void callSpecial(Character player) {
 
-        if (DEBUG) {
+        if (debug) {
             System.out.println("DEBUG: Attempting to get special of " + player.getName());
         }
 
@@ -317,7 +315,7 @@ public class Battle {
 
         if ((modifier * specialCheck) <= special) {
 
-            if (DEBUG) {
+            if (debug) {
                 System.out.println("DEBUG: specialEffect() has been called for  " + player.getName());
             }
 
@@ -327,7 +325,7 @@ public class Battle {
                 player.setSpecial(player.getSpecial()-1);
             }
 
-            if (DEBUG) {
+            if (debug) {
                 System.out.println("DEBUG: the special of " + player.getName() + " is now " + player.getSpecial());
             }
 
