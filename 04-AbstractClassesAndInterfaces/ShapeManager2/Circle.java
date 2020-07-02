@@ -1,4 +1,5 @@
 // STUB CODE: Dave Ghidiu
+// v 1.0.0
 
 public class Circle implements Shape {
     
