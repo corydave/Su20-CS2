@@ -1,3 +1,8 @@
+// NAME: 
+// DATE:
+// DESC:
+
+// v 1.0.0
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -79,14 +84,6 @@ public class ShapeManager2 {
         
         System.out.println();
         System.out.println("STUB CODE: listShapes()");
-        System.out.println();
-        
-    }
-    
-    public static void sortShapes(Scanner scanner, ArrayList<Shape> shapes) {
-        
-        System.out.println();
-        System.out.println("STUB CODE: sortShapes()");
         System.out.println();
         
     }
